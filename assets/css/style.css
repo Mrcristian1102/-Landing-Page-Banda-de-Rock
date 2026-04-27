@@ -1,0 +1,282 @@
+:root {
+    --color-fondo: #111;
+    /* Fondo principal */
+    --color-texto: #eee;
+    /* Texto general */
+    --color-acento: #b81515;
+    /* Rojo rock */
+    --color-oscuro: #000;
+    /* Header y footer */
+    --color-tabla-fondo: #1a1a1a;
+    --color-tabla-raya: #222;
+    --color-borde: #444;
+    --fuente-principal: Arial, sans-serif;
+    --tamano-titulo-hero: 48px;
+    --altura-hero: 70vh;
+    --espaciado: 20px;
+}
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-start;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 25px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+a {
+    color: var(--color-acento);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px var(--espaciado);
+    background-color: var(--color-oscuro);
+    border-bottom: 3px solid var(--color-acento);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--color-acento);
+    margin: 0;
+}
+
+
+.nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 12px;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+nav a {
+    font-weight: bold;
+    font-size: 16px;
+    color: #ccc;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+
+
+
+
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://wearerock.wordpress.com/wp-content/uploads/2013/11/f61e2b21d1.jpg') center/cover no-repeat;
+    height: var(--altura-hero);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--espaciado);
+}
+
+.hero h1 {
+    font-size: var(--tamano-titulo-hero);
+    margin: 0;
+    text-shadow: 2px 2px 10px black;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 15px 0 25px;
+    color: #ddd;
+}
+
+.cta-button {
+    background-color: var(--color-acento);
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #b81515;
+}
+
+
+
+
+
+
+section {
+    padding: 40px var(--espaciado);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 30px;
+    border-bottom: 2px solid var(--color-acento);
+    padding-bottom: 5px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+
+
+
+
+
+.events-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: var(--color-tabla-fondo);
+}
+
+.events-table th,
+.events-table td {
+    border: 1px solid var(--color-borde);
+    padding: 10px;
+    text-align: left;
+}
+
+.events-table th {
+    background-color: var(--color-acento);
+    color: var(--color-oscuro);
+    font-weight: bold;
+}
+
+.events-table tr:nth-child(even) {
+    background-color: var(--color-tabla-raya);
+}
+
+
+
+
+.about p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+
+
+.multimedia .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.multimedia img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid var(--color-acento);
+    border-radius: 8px;
+}
+
+
+
+
+footer {
+    background-color: var(--color-oscuro);
+    text-align: center;
+    padding: 25px;
+    border-top: 3px solid var(--color-acento);
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #aaa;
+}
+
+.social a {
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+
+
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-right: 15px;
+        font-size: 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .multimedia img {
+        width: 140px;
+        height: 100px;
+    }
+}
